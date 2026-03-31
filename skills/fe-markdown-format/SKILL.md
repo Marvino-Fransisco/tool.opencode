@@ -279,7 +279,7 @@ interface [ComponentName]Props {
 
 ## File Output
 
-Save to: `[feature-name]-design.md`
+Save to: `[feature-name]-fe-design.md`
 
 The file should be self-contained. Someone who wasn't part of the design discussion should be able to read it and understand:
 - What is being built and why

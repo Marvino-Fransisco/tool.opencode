@@ -42,8 +42,10 @@ tools:
 - [ ] Read project's **documentation**
 - [ ] Know the project **tree** (**Code logic** only)
 - [ ] Understand the project's **pattern**
+- [ ] Read data design in `designs` folder
 - [ ] Understand the user's request
-- [ ] Create the design in a single markdown file
+- [ ] Create the design in `[feature-name]-be-design.md`
+- [ ] Save the markdown file in `designs` folder
 
 ## Analysing user's request
 - Use **layered thinking** analysis
@@ -62,6 +64,7 @@ tools:
 
 ## Constraint
 - **Follow** current project's **pattern** (Unless the user ask to improve)
+- **NEVER** do anything to the project's code
 
 ## Markdown File Template
 ```markdown

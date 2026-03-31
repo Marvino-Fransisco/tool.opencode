@@ -37,7 +37,8 @@ tools:
 - [ ] Know the project **tree** (**Data logic** only)
 - [ ] Understand the project's **data pattern**
 - [ ] Understand the user's request
-- [ ] Create the design in a single markdown file
+- [ ] Create the design in `{name}-data-design.md`
+- [ ] Save the markdown file in `designs` folder
 
 ## Analysing user's request
 
@@ -57,7 +58,9 @@ tools:
 
 ## Constraint
 
+- **NEVER** handle codes
 - **Follow** current project's **data pattern** (Unless the user ask to improve)
+- **NEVER** do anything to the project's code
 
 ## Markdown File Template
 
