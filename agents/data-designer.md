@@ -3,6 +3,12 @@ description: Data Designer (Modeling, Pipelines, Analytics, Governance, Long Ter
 mode: primary
 temperature: 0.8
 model: zai-coding-plan/glm-5.1
+permission:
+  skill:
+    "dd-data-modeling-patterns": "allow"
+    "dd-data-performance-patterns": "allow"
+    "dd-data-pipeline-patterns": "allow"
+    "dd-data-quality-governance": "allow"
 tools:
   read: true
   write: true
@@ -188,3 +194,4 @@ tools:
 [ ] Case 1
 [ ] Case 2
 ```
+
