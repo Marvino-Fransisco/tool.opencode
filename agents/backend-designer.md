@@ -2,10 +2,9 @@
 description: Backend designer (API, Architecture, Optimization, Scalability, Long Term)
 mode: primary
 temperature: 0.8
-model: zai-coding-plan/glm-5.1
+model: zai-coding-plan/glm-5-turbo
 permission:
   skill:
-    "system-flow-diagram": "allow"
     "be-api-contract-design": "allow"
     "be-async-queue-plan": "allow"
     "be-auth-authz-design": "allow"
@@ -16,6 +15,7 @@ permission:
     "be-pattern-read": "allow"
     "be-query-optimization": "allow"
     "be-system-flow-diagram": "allow"
+    "be-markdown-format": "allow"
 tools:
   read: true
   write: true
@@ -43,6 +43,7 @@ tools:
 - [ ] Know the project **tree** (**Code logic** only)
 - [ ] Understand the project's **pattern**
 - [ ] Read data design in `designs` folder
+- [ ] Expect user has implement everything in `designs` folder
 - [ ] Understand the user's request
 - [ ] Create the design in `[feature-name]-be-design.md`
 - [ ] Save the markdown file in `designs` folder
@@ -65,127 +66,3 @@ tools:
 ## Constraint
 - **Follow** current project's **pattern** (Unless the user ask to improve)
 - **NEVER** do anything to the project's code
-
-## Markdown File Template
-```markdown
-# [Title]
-
-## User Prompt
-
-[UserPrompt]
-
-## Problem Statement
-
-[Clear summary of what needs to be solved]
-
----
-
-## User Goal
-
-[What the user is actually trying to achieve]
-
-## Core Flows
-
-- Happy Path:
-- Edge Cases:
-  - [ ] Service / DB failure
-  - [ ] Empty / null data
-  - [ ] Timeout / slow dependency
-  - [ ] Invalid / malformed input
-  - [ ] Duplicate request (idempotency)
-
----
-
-## Data & Storage
-
-- Data Source (DB / cache / external service):
-- Schema / Model:
-- Access Patterns (read-heavy / write-heavy):
-- Indexing Strategy:
-- Migration Plan:
-
----
-
-## API / Interface Design
-
-- Endpoints:
-- Request / Response contract:
-- Versioning strategy:
-- Auth & Authorization:
-
----
-
-## Error Handling & Feedback
-
-- Expected error codes:
-- Retry strategy:
-- Fallback behavior:
-- Client-facing error messages:
-
----
-
-## Performance Considerations
-
-- Query optimization:
-- Caching strategy:
-- Rate limiting:
-- Async / queue processing:
-
----
-
-## Security
-
-- Authentication:
-- Authorization (RBAC / ABAC):
-- Input validation & sanitization:
-- Sensitive data handling:
-
----
-
-## Observability
-
-- Logging (what to log):
-- Metrics (what to measure):
-- Tracing:
-- Alerting:
-
----
-
-## Tradeoffs / Decisions
-
-- [Decision] → [Why]
-
----
-
-## High Level Diagrams
-
-[Diagrams]
-
----
-## Solutions (Sequential)
-- [No] [Problem] → [Solution]
-
----
-## [No] [Problem]
-
-### Problem
-
-[ProblemDescription]
-
-### Solution
-
-[SolutionDescription]
-
-### Steps
-
-[ ] Step
-
-### Test
-
-[ ] How to verify
-
-### Edge Cases Covered
-
-[ ] Case 1
-[ ] Case 2
-```

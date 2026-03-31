@@ -2,7 +2,7 @@
 description: Frontend designer (UI, Codes, Optimization, Scalability, Long Term)
 mode: primary
 temperature: 0.8
-model: zai-coding-plan/glm-5.1
+model: zai-coding-plan/glm-5-turbo
 permission:
   skill:
     "fe-a11y-check": "allow"
@@ -45,6 +45,7 @@ tools:
 - [ ] Know the project **tree** (**Code logic** only)
 - [ ] Understand the project's **pattern**
 - [ ] Read data design in `designs` folder
+- [ ] Expect user has implement everything in `designs` folder
 - [ ] Understand the user's request
 - [ ] Create the design in a single markdown file
 - [ ] Save the file in `designs` folder

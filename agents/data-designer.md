@@ -2,13 +2,14 @@
 description: Data Designer (Modeling, Pipelines, Analytics, Governance, Long Term)
 mode: primary
 temperature: 0.8
-model: zai-coding-plan/glm-5.1
+model: zai-coding-plan/glm-5-turbo
 permission:
   skill:
     "dd-data-modeling-patterns": "allow"
     "dd-data-performance-patterns": "allow"
     "dd-data-pipeline-patterns": "allow"
     "dd-data-quality-governance": "allow"
+    "dd-markdown-format": "allow"
 tools:
   read: true
   write: true
@@ -58,143 +59,6 @@ tools:
 
 ## Constraint
 
-- **NEVER** handle codes
+- **NEVER** handle the frontend or backend codes
 - **Follow** current project's **data pattern** (Unless the user ask to improve)
 - **NEVER** do anything to the project's code
-
-## Markdown File Template
-
-```markdown
-# [Title]
-
-## User Prompt
-
-[UserPrompt]
-
-## Problem Statement
-
-[Clear summary of what needs to be solved]
-
----
-
-## User Goal
-
-[What the user is actually trying to achieve]
-
-## Core Flows
-
-- Happy Path:
-- Edge Cases:
-  - [ ] Source / DB failure
-  - [ ] Empty / null data
-  - [ ] Late arriving / out-of-order data
-  - [ ] Invalid / malformed records
-  - [ ] Duplicate records (idempotency)
-
----
-
-## Data Modeling
-
-- Data Source (DB / lake / stream / external):
-- Schema / Model:
-- Relationships & Cardinality:
-- Normalization Strategy (3NF / star / snowflake / flat):
-- Access Patterns (read-heavy / write-heavy / OLAP / OLTP):
-- Indexing Strategy:
-- Partitioning & Sharding:
-- Migration Plan:
-
----
-
-## Pipeline / Interface Design
-- Ingestion Method (batch / streaming / CDC):
-- Transformation Steps:
-- Aggregation Logic:
-- Output / Sink:
-- Scheduling & Orchestration:
-
----
-
-## Data Quality & Validation
-- Validation Rules:
-- Deduplication Strategy:
-- Null / Default Handling:
-- Anomaly Detection:
-- Reconciliation Strategy:
-
----
-
-## Error Handling & Feedback
-- Expected failure scenarios:
-- Retry & reprocessing strategy:
-- Dead-letter / quarantine handling:
-- Alerting on data quality issues:
-
----
-
-## Performance Considerations
-- Query optimization:
-- Caching strategy:
-- Partitioning for performance:
-- Async / queue processing:
-
----
-
-## Security & Governance
-- Authentication & Authorization (RBAC / ABAC):
-- Data Classification (PII / sensitive):
-- Masking & Encryption:
-- Retention & Deletion Policy:
-- Audit Trail:
-
----
-
-## Observability
-- Logging (what to log):
-- Metrics (freshness, volume, error rate):
-- Lineage Tracking:
-- Alerting:
-
----
-
-## Tradeoffs / Decisions
-
-- [Decision] → [Why]
-
----
-
-## High Level Diagrams
-
-[Diagrams]
-
----
-
-## Solutions (Sequential)
-
-- [No] [Problem] → [Solution]
-
----
-
-## [No] [Problem]
-
-### Problem
-
-[ProblemDescription]
-
-### Solution
-
-[SolutionDescription]
-
-### Steps
-
-[ ] Step
-
-### Test
-
-[ ] How to verify
-
-### Edge Cases Covered
-[ ] Case 1
-[ ] Case 2
-```
-
